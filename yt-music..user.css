@@ -259,6 +259,47 @@ yt-formatted-string.song-title.style-scope.ytmusic-player-queue-item {
   font-style: italic !important;
 }
 
+/* Queue song artist */
+.duration.ytmusic-player-queue-item,
+.byline.ytmusic-player-queue-item {
+font-family: "Test Tiempos Text", serif !important;
+  font-size:0.8rem !important; 
+  line-height: var(--ytmusic-title-line-height);
+  font-weight: 500 !important;
+  color: var(--text--faded) !important;
+  --yt-endpoint-color: var(--text-offwhite-faded) !important;
+  --yt-endpoint-hover-color: var(--text-offwhite-faded) !important;
+  --yt-endpoint-visited-color: var(--text-offwhite-faded) !important;
+}
+
+/* 19) Queue header */
+ytmusic-guide-entry-renderer[active] .title.ytmusic-guide-entry-renderer {
+  color: var(--faded-blue) !important;
+  font-family: "Test Tiempos Text", serif !important;
+  font-weight: 700 !important;
+}
+
+/* 20) Guide entry */
+yt-formatted-string.ytmusic-guide-entry-renderer {
+  color: var(--text-offwhite-faded) !important;
+  font-family: "Test Tiempos Text", serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+}
+ytmusic-guide-entry-renderer:not([is-primary]) .title.ytmusic-guide-entry-renderer {
+  font-family: "Test Tiempos Text", serif !important;
+  font-size: 0.9rem !important;
+  color: var(--faded-green) !important;
+  font-weight: 600 !important;
+}
+
+
+
+
+
+
+
+
 /* 19) Play button icon color on accent */
 ytmusic-play-button-renderer {
   --ytmusic-play-button-icon-color: var(--bg-dark) !important;
@@ -338,7 +379,7 @@ yt-formatted-string[dir=auto][ellipsis-truncate-styling].complex-string {
 
 
 /* save button  */
-ytmusic-chip-cloud-chip-renderer[chip-style=STYLE_TRANSPARENT] a.ytmusic-chip-cloud-chip-renderer {
+ytmusic-chip-cloud-chip-renderer[chip-style=STYLE_TRANSPARENT] a.ytmusic-chip-cloud-chip-renderer , ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_PRIMARY] a.ytmusic-chip-cloud-chip-renderer, ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_SECONDARY] a.ytmusic-chip-cloud-chip-renderer, ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_UNKNOWN][is-selected] a.ytmusic-chip-cloud-chip-renderer, ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_ICON_SECOND][is-selected] a.ytmusic-chip-cloud-chip-renderer {
     font-weight: 500 !important;
     color: var(--faded-red) !important;
     --yt-endpoint-color: var(--faded-red) !important;
@@ -361,9 +402,30 @@ ytmusic-chip-cloud-chip-renderer[chip-style=STYLE_TRANSPARENT] a.ytmusic-chip-cl
 }
 
 
+/* Text color in all of the app  */
+yt-formatted-string.title.style-scope , yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string {
+
+    color: var(--bg_green) !important;
+    font-family: "Test Tiempos Text", serif !important;
+    font-weight: 700 !important;
+}
+
+
+/* Artist bar in the app  */
+.substring-group.ytmusic-two-row-item-renderer .subtitle.ytmusic-two-row-item-renderer, 
+a.yt-simple-endpoint.yt-formatted-string{
+    color: var(--text-offwhite-faded) !important;
+    font-family: "Test Tiempos Text", serif !important;
+    font-weight: 500 !important;
+}
 
 
 
+
+yt-formatted-string.style-scope.ytmusic-responsive-list-item-renderer{
+    color: var(--dim-green) !important;
+    font-family: "Test Tiempos Text", serif !important;
+}
 
 
 
