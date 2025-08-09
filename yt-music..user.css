@@ -170,7 +170,7 @@ yt-button-renderer[is-paper-button],
 .previous-items-button.ytmusic-carousel,
 .next-items-button.ytmusic-carousel,
 ytmusic-play-button-renderer .content-wrapper {
-  background: var(--faded-green) !important;
+  background: var(--text-offyellowish) !important;
   color: var(--bg-dark) !important;
 }
 
@@ -205,49 +205,22 @@ ytmusic-chip-cloud-renderer.ytmusic-section-list-renderer,
   padding: 8px 16px !important;
   margin: 8px 0 !important;
 }
-
 /* 12.1) Search input with frosted glass */
 ytmusic-search-box input.ytmusic-search-box {
   background: transparent !important;
-  backdrop-filter: blur(12px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 0px !important;
-  color: var(--fg-dark) !important;
-  padding: 8px 16px !important;
-  transition: all 0.3s ease !important;
 }
 
 /* 12.2) Search input with frosted glass (has query) */
 ytmusic-search-box[has-query] input.ytmusic-search-box {
-  background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(12px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 0px !important;
-  color: var(--fg-dark) !important;
-  padding: 8px 16px !important;
-  transition: all 0.3s ease !important;
+  background: transparent !important;
+
 }
 
 /* 12.3) Search input with frosted glass (opened) */
 ytmusic-search-box[opened] input.ytmusic-search-box {
-  background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(12px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 0px !important;
-  color: var(--fg-dark) !important;
-  padding: 8px 16px !important;
-  transition: all 0.3s ease !important;
+background: transparent !important;
 }
 
-
-/* Not sure about this right now  */
-ytmusic-search-box[opened] input.ytmusic-search-box {
-  background: rgba(255, 255, 255, 0.15) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
-}
 
 /* 13) Toasts */
 tp-yt-paper-toast {
@@ -290,6 +263,108 @@ yt-formatted-string.song-title.style-scope.ytmusic-player-queue-item {
 ytmusic-play-button-renderer {
   --ytmusic-play-button-icon-color: var(--bg-dark) !important;
 }
+
+/* 20) Search Input Placeholder Styles */
+ytmusic-search-box input.ytmusic-search-box::placeholder {
+  color: var(--text-offwhite-faded) !important;
+  opacity: 0.9 !important;
+  font-style: italic !important;
+  transition: all 0.2s ease !important;
+}
+
+ytmusic-search-box input.ytmusic-search-box:focus::placeholder {
+  color: var(--text-offwhite-faded) !important;
+  opacity: 0.7 !important;
+  transform: translateX(4px) !important;
+}
+
+/* Search icon color */
+ytmusic-search-box #search-icon {
+  color: var(--faded-red) !important;
+  transition: color 0.2s ease !important;
+}
+/* Search icon hover */
+ytmusic-search-box #search-icon:hover {
+  color: var(--faded-yellow) !important;
+}
+
+
+
+/* Search suggestion box */
+ytmusic-search-box #suggestion-list.ytmusic-search-box {
+    width: 100%;
+    position: absolute;
+    border-radius: 0 0 8px 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--shadow-bg);
+    padding: 8px 0;
+    background: transparent !important;
+    color: var(--dark-green) !important;
+}
+ytmusic-search-box[is-bauhaus-sidenav-enabled] {
+    --ytmusic-search-box-height: 40px !important;
+    --ytmusic-search-background: var(--bg-dark-new) !important;
+    --ytmusic-search-border: var(--bg5-dark) !important;
+}
+
+
+
+
+/* Icons */
+.yt-icon-container.yt-icon, .ytIconWrapperHost.yt-icon{
+    fill: var(--faded-yellow) !important;
+}
+
+yt-icon{
+    color: var(--faded-red) !important;
+    stroke: currentColor !important ; 
+    stroke-width: 1.2px !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    stroke-miterlimit: 10 !important;
+    stroke-opacity: 1 !important;
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+    
+}
+
+yt-formatted-string[dir=auto][ellipsis-truncate-styling].complex-string {
+   color: var(--text-offwhite-faded) !important;
+   font-family: "Test Tiempos Headline", serif !important;
+   font-style: italic !important;
+   font-weight: 600 !important;
+}
+
+
+
+/* save button  */
+ytmusic-chip-cloud-chip-renderer[chip-style=STYLE_TRANSPARENT] a.ytmusic-chip-cloud-chip-renderer {
+    font-weight: 500 !important;
+    color: var(--faded-red) !important;
+    --yt-endpoint-color: var(--faded-red) !important;
+    --yt-endpoint-hover-color: var(--faded-red) !important;
+    --yt-endpoint-visited-color: var(--faded-red) !important;
+    display: flex;
+    align-items: center;
+    background: var(--text-offwhite-faded) !important;
+    color: var(--faded-red) !important;
+    border-radius: 56px;
+    padding: 4px 8px 4px 13px;
+    transition: all 0.2s ease !important;
+}
+
+/* Hover for the save button */
+ytmusic-chip-cloud-chip-renderer[chip-style=STYLE_TRANSPARENT] a.ytmusic-chip-cloud-chip-renderer:hover {
+    background: var(--text-offwhite-faded) !important;
+    border:  solid 2px var(--faded-red) !important;
+    transition: border 0.4s ease !important;
+}
+
+
+
+
+
+
 
 
 }
