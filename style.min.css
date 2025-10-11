@@ -187,7 +187,7 @@ span.time-info.style-scope.ytmusic-player-bar,
 /* 11) Chip cloud container with frosted glass */
 ytmusic-chip-cloud-renderer.ytmusic-section-list-renderer,
 #chips.ytmusic-section-list-renderer {
-    background: rgba(29, 32, 33, 0.6) !important;
+    background: var(--shadow-bg) !important;
     backdrop-filter: blur(12px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
     border-radius: 12px;
@@ -279,6 +279,17 @@ ytmusic-guide-entry-renderer:not([is-primary])
     font-size: 0.9rem !important;
     color: var(--faded-green) !important;
     font-weight: 600 !important;
+}
+
+/* Main page main cards background */
+ytmusic-section-list-renderer {
+    background: var(--shadow-bg) !important;
+}
+
+/* Sidebar background */
+ytmusic-guide-section-renderer,
+ytmusic-app-layout {
+    background: var(--shadow-bg) !important;
 }
 
 /* 19) Play button icon color on accent */
