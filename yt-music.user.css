@@ -198,13 +198,25 @@ span.time-info.style-scope.ytmusic-player-bar,
 /* 11) Chip cloud container with frosted glass */
 ytmusic-chip-cloud-renderer.ytmusic-section-list-renderer,
 #chips.ytmusic-section-list-renderer {
-  background: rgba(29, 32, 33, 0.6) !important;
+  background: var(--shadow-bg) !important;
   backdrop-filter: blur(12px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
   border-radius: 12px;
   padding: 8px 16px !important;
   margin: 8px 0 !important;
 }
+
+/* Main page main cards background */
+ytmusic-section-list-renderer {
+  background: var(--shadow-bg) !important;
+}
+
+/* Sidebar background */
+ytmusic-guide-section-renderer,
+ytmusic-app-layout {
+  background: var(--shadow-bg) !important;
+}
+
 /* 12.1) Search input with frosted glass */
 ytmusic-search-box input.ytmusic-search-box {
   background: transparent !important;
